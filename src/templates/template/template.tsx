@@ -102,7 +102,7 @@ export const Template: FunctionComponent<TemplateProps<TemplateCertificate>> = (
       </svg>
       <h4>🎉🎉 Congratulations 🎉🎉</h4>
       <div>You finished successfully the OpenAttestation tutorial by issuing this certificate to</div>
-      <div className="recipient">{document.recipient}</div>
+      <div className="recipient">{document.recipient.name}</div>
     </div>
   );
 };
