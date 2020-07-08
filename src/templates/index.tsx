@@ -1,7 +1,7 @@
 import { TemplateRegistry } from "@govtechsg/decentralized-renderer-react-components";
-import { templates } from "./customTemplate";
+import { templates } from "./template";
 import styled from "@emotion/styled";
-import { CustomTemplate } from "./customTemplate/customTemplate";
+import { Template } from "./template/template";
 
 export const registry: TemplateRegistry<any> = {
   custom: templates,
@@ -9,7 +9,7 @@ export const registry: TemplateRegistry<any> = {
     {
       id: "custom-red",
       label: "Red Custom Template",
-      template: styled(CustomTemplate)`
+      template: styled(Template)`
         color: red;
       `
     }

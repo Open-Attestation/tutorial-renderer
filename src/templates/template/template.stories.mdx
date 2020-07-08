@@ -1,0 +1,22 @@
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { Template } from "./template";
+import { templateCertificate } from "../sample";
+
+<Meta title="MDX|Template" component={Template} />
+
+# Template component
+
+<Description of={Template} />
+
+# Props
+
+<Props of={Template} />
+
+# Usage
+
+<Preview>
+  <Story name="basic sample">
+    <Template document={object("document", templateCertificate)} />
+  </Story>
+</Preview>
