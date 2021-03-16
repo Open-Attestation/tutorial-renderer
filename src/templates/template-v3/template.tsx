@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
 import { css } from "@emotion/core";
-import { TemplateCertificate } from "../sample";
+import { TemplateCertificateV3 } from "../sample";
 import { Trophy } from "../../trophy";
 
 const style = css`
@@ -21,13 +21,13 @@ const style = css`
   }
 `;
 
-export const Template: FunctionComponent<TemplateProps<TemplateCertificate>> = ({ document }) => {
-  const issuer = document.issuers[0]?.identityProof?.location ?? "unknown";
+export const Template: FunctionComponent<TemplateProps<TemplateCertificateV3>> = ({ document }) => {
+  const issuer = document.openAttestationMetadata.identityProof.identifier;
   return (
     <div css={style} id="custom-template">
       <Trophy />
       <h4>🎉🎉 Congratulations 🎉🎉</h4>
-      <div>You have successfully finished the v2 OpenAttestation tutorial by issuing this certificate to</div>
+      <div>You have successfully finished the v3 OpenAttestation tutorial by issuing this certificate to</div>
       <div className="recipient">{document.recipient.name}</div>
       <div className="issuer">Issued by {issuer}</div>
     </div>
