@@ -7,7 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
-    "@govtechsg/decentralized-renderer-react-components": "^3.4.1",
+    "@govtechsg/decentralized-renderer-react-components": "^3.4.2",
     "@govtechsg/open-attestation": "^4.7.3",
     "@hot-loader/react-dom": "^16.11.0",
     "debug": "4.1.1",
@@ -19,7 +19,6 @@
     "build": "npm run check-types && cross-env NODE_ENV=production webpack --progress --mode production",
     "check-types": "tsc --sourceMap false --noEmit",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "example:application": "webpack-dev-server --config application/webpack.config.js",
     "lint": "eslint . --ext .ts,.tsx,.mdx --max-warnings 0",
     "lint:fix": "npm run lint -- --fix",
     "storybook": "start-storybook -p 6006",
