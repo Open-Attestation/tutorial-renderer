@@ -24,8 +24,8 @@ export const Template: FunctionComponent<TemplateProps<DriverLicenseDocument>> =
       <h4>{document.name}</h4>
       <small>{id}</small>
       <div>Name: {name}</div>
-      {classes.map(({ type, effectiveDate }) => (
-        <div className="class-item">
+      {classes.map(({ type, effectiveDate }, key) => (
+        <div className="class-item" key={key}>
           <div>Type: {type}</div>
           <div>Effective Date: {new Date(effectiveDate).toDateString()}</div>
         </div>
