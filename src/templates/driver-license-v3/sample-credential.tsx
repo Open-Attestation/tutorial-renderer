@@ -5,6 +5,8 @@ export interface DriverLicenseDocument extends v3.OpenAttestationDocument {
     id: string;
     name: string;
     class: { type: string; effectiveDate: string }[];
+    licenseNumber: string;
+    birthDate: string;
   };
 }
 
@@ -27,6 +29,8 @@ export const driverLicense: DriverLicenseDocument = {
   credentialSubject: {
     id: "did:example:JOHN_DOE_DID",
     name: "John Doe",
+    licenseNumber: "S1234567a",
+    birthDate: "1977-02-22",
     class: [
       {
         type: "3",
