@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Trophy = () => (
+export const Trophy = (): any => (
   <svg version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" width="200px">
     <rect x="239.359" y="313.84" style={{ fill: "#FECF05" }} width="40.78" height="40.09" />
     <g>
