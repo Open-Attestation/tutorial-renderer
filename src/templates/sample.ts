@@ -18,18 +18,21 @@ export const templateCertificate: TemplateCertificate = {
 };
 
 export interface TemplateCertificateV3 extends v3.OpenAttestationDocument {
-  recipient: { name: string };
+  credentialSubject: {
+    recipient: { name: string };
+  };
 }
 
 export const templateCertificateV3: TemplateCertificateV3 = {
   "@context": [],
-  recipient: { name: "John Doe" },
   issuer: {
     name: "Name",
     id: "id"
   },
   type: "Credential",
-  credentialSubject: {},
+  credentialSubject: {
+    recipient: { name: "John Doe" }
+  },
   issuanceDate: "2020-01-02",
   openAttestationMetadata: {
     identityProof: {
@@ -39,7 +42,10 @@ export const templateCertificateV3: TemplateCertificateV3 = {
     proof: {
       value: "abcd",
       type: v3.ProofType.OpenAttestationProofMethod,
-      method: v3.Method.DocumentStore
+      method: v3.Method.DocumentStore,
+      revocation: {
+        type: v3.RevocationType.None
+      }
     }
   }
 };

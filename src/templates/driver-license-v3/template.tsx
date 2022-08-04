@@ -3,7 +3,7 @@ import { TemplateProps } from "@govtechsg/decentralized-renderer-react-component
 import { css } from "@emotion/core";
 import { DriverLicenseDocument } from "./sample-credential";
 import background from "./images/driver-license-background.png";
-import {PrintWatermark} from '../../print-watermark';
+import { PrintWatermark } from "../../print-watermark";
 
 const style = css`
   width: 100%;
